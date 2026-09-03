@@ -1,0 +1,15 @@
+syntax =  "proto3";
+
+package sec01;
+option java_package = "com.example.models.sec01";
+
+/*
+  multi line comment
+  this is my proto
+*/
+
+message Person {
+  // single line comment
+  string name = 1; // you can write comments here
+  int32 age = 2;
+}
