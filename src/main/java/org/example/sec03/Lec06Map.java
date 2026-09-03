@@ -1,5 +1,6 @@
 package org.example.sec03;
 
+import com.example.models.sec03.BodyStyle;
 import com.example.models.sec03.Car;
 import com.example.models.sec03.Dealer;
 import org.slf4j.Logger;
@@ -15,12 +16,14 @@ public class Lec06Map {
                 .setMake("honda")
                 .setModel("civic")
                 .setYear(2000)
+                .setBodyStyle(BodyStyle.COUPE)
                 .build();
 
         var car2 = Car.newBuilder()
                 .setMake("honda")
                 .setModel("accord")
                 .setYear(2002)
+                .setBodyStyle(BodyStyle.SEDAN)
                 .build();
 
         var dealer = Dealer.newBuilder()
@@ -34,5 +37,6 @@ public class Lec06Map {
         log.info("2003 ? : {}", dealer.containsInventory(2003));
 
         log.info("2002 model: {}", dealer.getInventoryOrThrow(2002).getModel());
+        log.info("2002 body style: {}", dealer.getInventoryOrThrow(2002).getBodyStyle());
     }
 }
