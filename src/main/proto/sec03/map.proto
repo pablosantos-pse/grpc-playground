@@ -1,4 +1,4 @@
-syntax =  "proto3";
+syntax = "proto3";
 
 package sec03;
 
@@ -6,7 +6,8 @@ option java_multiple_files = true;
 option java_package = "com.example.models.sec03";
 
 enum BodyStyle {
-  SEDAN = 0;
+  UNKNOWN = 0;
+  SEDAN = 1;
   COUPE = 2;
   SUV = 3;
 }
